@@ -1,0 +1,88 @@
+{
+    "courseList": [
+        {
+            "id": 0,
+            "courseName": "Java Tutorial for Beginners: Learn Core",
+            "lessonName": "Object-oriented Programming on Java",
+            "totalLessonCount": 40,
+            "completedLessonCount": 20,
+            "updatedOn": "12/12/2023",
+            "assesmentCount": 3,
+            "courseDuration": 40,
+            "totalSeat": 20,
+            "seatLeft": 10,
+            "isCompleted": false,
+            "isEnrolled": false
+        },
+        {
+            "id": 1,
+            "courseName": "Anroid Development",
+            "lessonName": "Working with loops on Kotlin",
+            "totalLessonCount": 30,
+            "completedLessonCount": 10,
+            "updatedOn": "12/11/2023",
+            "assesmentCount": 5,
+            "courseDuration": 60,
+            "totalSeat": 20,
+            "seatLeft": 5,
+            "isCompleted": false,
+            "isEnrolled": false
+        },
+        {
+            "id": 2,
+            "courseName": "iOS Development",
+            "lessonName": "Working with loops in swift",
+            "totalLessonCount": 20,
+            "completedLessonCount": 10,
+            "updatedOn": "12/10/2023",
+            "assesmentCount": 3,
+            "courseDuration": 40,
+            "totalSeat": 20,
+            "seatLeft": 15,
+            "isCompleted": false,
+            "isEnrolled": false
+        },
+        {
+            "id": 3,
+            "courseName": "Python Crash Course",
+            "lessonName": "Object-oriented Programming on Python",
+            "totalLessonCount": 50,
+            "completedLessonCount": 30,
+            "updatedOn": "18/12/2023",
+            "assesmentCount": 2,
+            "courseDuration": 20,
+            "totalSeat": 20,
+            "seatLeft": 5,
+            "isCompleted": false,
+            "isEnrolled": false
+        },
+        {
+            "id": 4,
+            "courseName": "Flutter Development",
+            "lessonName": "Object-oriented Programming on Dart",
+            "totalLessonCount": 40,
+            "completedLessonCount": 30,
+            "updatedOn": "02/10/2023",
+            "assesmentCount": 4,
+            "courseDuration": 30,
+            "totalSeat": 20,
+            "seatLeft": 5,
+            "isCompleted": false,
+            "isEnrolled": false
+        },
+        {
+            "id": 5,
+            "courseName": "React Development",
+            "lessonName": "Working with hooks on React",
+            "totalLessonCount": 10,
+            "completedLessonCount": 5,
+            "updatedOn": "15/08/2023",
+            "assesmentCount": 6,
+            "courseDuration": 40,
+            "totalSeat": 20,
+            "seatLeft": 0,
+            "isCompleted": false,
+            "isEnrolled": false
+        }
+    ]
+}

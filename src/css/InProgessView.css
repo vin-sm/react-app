@@ -1,0 +1,33 @@
+.inprogress-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+} 
+.inprogress-cards-row {
+    width: 75%;
+    padding-right: 40px;
+}
+.continue-learning {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.continue-learning h1 {
+    color: #11142D;
+}
+.continue-learning m1 {
+    font-weight: normal;
+    color: #86BC24;
+    font-size: 12px;
+}
+.card-list {
+    display: flex;
+    flex-direction: column;
+}
+.status {
+    color: #11142D;
+    width: 25%;
+}

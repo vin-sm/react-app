@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  height: 100px;
+  }
+.card img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 16px;
+}
+.card-details h5 {
+  color: #11142D;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.card-details p {
+  color: #92929D;
+  font-size: 8px;
+  font-weight: normal;
+}
+.card-details h6 {
+  color: #11142D;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+.progress {
+  width: 55vw;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress button {
+  width: 100px;
+  height: 24px;
+  border: none;
+  margin-left: 60px;
+  background-color: #86BC24;
+  color: white;
+  border-radius: 8px;
+}
+.mainDiv {
+  height: 4px;
+  background-color: whitesmoke;
+  border-radius: 2px;
+}
+.childDiv {
+  height: 100%;
+  background-color: #86BC24;
+  border-radius: 2px;
+  text-align: left;
+}

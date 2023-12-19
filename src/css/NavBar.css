@@ -1,0 +1,51 @@
+/* NavBar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    width: 100vw;
+  }
+  
+  .left-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circular-view {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .app-icon {
+    width: 80px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .details {
+    display: inline;
+  }
+  .name {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .email {
+    font-size: 10px;
+    font-weight: normal;
+  }
+  .bell-icon {
+    width: 80px;
+    height: 40px;
+  }

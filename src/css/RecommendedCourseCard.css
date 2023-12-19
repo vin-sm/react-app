@@ -11,12 +11,9 @@
 .grid-container {
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: start; */
     justify-content: left;
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr); Three columns */
     grid-gap: 20px; /*Spacing between cards*/
-    max-width: 960px; /* Set your desired maximum width */
+    max-width: 1200px; /* Set your desired maximum width */
     margin: 0;
 }
 .recommended-card {

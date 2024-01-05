@@ -1,37 +1,25 @@
+import React from 'react';
 import NavBar from './NavBar'
 import LeftMenu from './LeftMenu';
-import InProgressCard from './InProgressView';
 import './App.css';
-import exploreNowIcon from './images/exploreNowIcon.svg'
-import RecommendedCourseView from './RecommendedCourseView'
-import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import DetailsPage from './DetailsPage';
+import HomePage from './HomePage';
 
 const App = () => {
-  const [receivedObject, setReceivedObject] = useState([]);
-  const handleObjectFromCourseView = (newData) => {
-    setReceivedObject(prevData => [...prevData, ...newData]);
-    // You can perform any action with the received object here
-  };
   return (
-    <div>
-      <NavBar />
-      <div style={{ display: 'flex' }}>
-        <LeftMenu />
-        <div className='main-content'>
-          <div className='explore-now'>
-            <div> 
-              <h1>Expand your career opportunities</h1>
-              <p>Choose from a list of online video courses with new additions published every month</p>
-              <button>Explore Now</button>
-            </div>
-              <div className='explore-image'><img src={exploreNowIcon} alt='exploreNowIcon'></img></div>
-          </div>
-          {receivedObject.length > 0 ? (
-            <InProgressCard cards={receivedObject}/>) : null}
-            <RecommendedCourseView onObjectPassed={handleObjectFromCourseView} />
+    <Router>
+      <div>
+        <NavBar />
+        <div style={{ display: 'flex' }}>
+          <LeftMenu />
+          <Routes>
+            <Route path="/" exact element={<HomePage />}  />
+            <Route path="/details/:id" element={<DetailsPage />} />
+          </Routes>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

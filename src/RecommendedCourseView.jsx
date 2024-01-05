@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Card from './RecommendedCourseCard';
 import './css/RecommendedCourseCard.css'
-import mockData from './mockData/courseList.json'; 
+import mockData from './mockData/courseList.json';
+import { Link } from 'react-router-dom';
 
 const RecommendedCourseView = ({ onObjectPassed }) => {
     const [cards, setCards] = useState(mockData);
@@ -14,17 +15,20 @@ const RecommendedCourseView = ({ onObjectPassed }) => {
             cards.courseList[id].seatLeft -= 1;
         }
         setCards(cards);
-      };
+    };
 
-    return  (
-    <div className='course-cards'>
-        <h4>Recommended for you</h4>
-        <div className="grid-container">{cards.courseList.map((card) => (
-            <Card key= {card.id} card={card} onClick={() => handleCardClick(card.id)}/>
-        ))}
+    return (
+        <div className='course-cards'>
+            <h4>Recommended for you</h4>
+            <div className="grid-container">{cards.courseList.map((card) => (
+                <Link to={`/details/${card.id}`} style={{ textDecoration: 'none' }}>
+                    <Card key={card.id} card={card} onClick={() => handleCardClick(card.id)} />
+                </Link>
+            ))}
+            </div>
         </div>
-    </div>  
-)};
+    )
+};
 
 export default RecommendedCourseView;
 

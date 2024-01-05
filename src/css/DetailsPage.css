@@ -1,0 +1,63 @@
+.main-content {
+    margin: 20px;
+    width: 100%;
+}
+.backToHome {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.header-title {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+.main-content button {
+    color: #86BC24;
+    border: 1px solid #86BC24;
+    border-color: #86BC24;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 10px;
+}
+.home-title {
+    color: #86BC24;
+}
+.course-detail-title {
+    padding-left: 10px;
+    color: #6A7178;
+}
+.assesments-view {
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 20px;
+    width: 76%;
+    align-items: center;
+    padding: 20px;
+}
+.introduction {
+    display: flex;
+    font-size: 10px;
+    font-weight: bold;
+    align-items: center;
+}
+.introduction img {
+    width: 20px;
+    height: auto;
+    padding-left: 10px;
+}
+.course-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F7F2;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+.course-card img {
+    width: 20px;
+    height: auto;
+    padding-right: 10px;
+}

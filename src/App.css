@@ -3,7 +3,10 @@ body {
 }
 .main-content {
   margin: 20px;
-  width: 100vw;
+  /* width: 100vw; */
+  width: calc(100% - 250px);
+  padding-top: 60px;
+  padding-left: 60px;
 }
 .explore-now {
   display: flex;

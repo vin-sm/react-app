@@ -9,35 +9,35 @@ import tickIcon from './images/tickIcon.svg';
 import greenTickIcon from './images/greenTickIcon.svg';
 import { useState } from "react";
 
-const DetailPageHeaderCard = ({data}) => {
+const DetailPageHeaderCard = ({ data, onClick}) => {
     var seatLeftClassName = 'seat-left2';
     if (data.seatLeft == 0) {
         seatLeftClassName = 'seat-full2'
-      } else if (data.seatLeft < (data.totalSeat-data.seatLeft)){
+    } else if (data.seatLeft < (data.totalSeat - data.seatLeft)) {
         seatLeftClassName = 'seat-half2'
-      }
-      const [copied, setCopied] = useState(false);
-      const copyToClipboard = () => {
-        
+    }
+    const [copied, setCopied] = useState(false);
+    const copyToClipboard = () => {
+
         navigator.clipboard.writeText(data.courseName)
-          .then(() => {
-            setCopied(true);
-    
-            // Clear after 5 seconds (adjust the timeout duration as needed)
-            setTimeout(() => {
-              setCopied(false);
-              navigator.clipboard.writeText(''); // Clear clipboard content
-            }, 5000);
-          })
-          .catch(err => console.error('Failed to copy: ', err));
-      };
+            .then(() => {
+                setCopied(true);
+
+                // Clear after 5 seconds (adjust the timeout duration as needed)
+                setTimeout(() => {
+                    setCopied(false);
+                    navigator.clipboard.writeText(''); // Clear clipboard content
+                }, 5000);
+            })
+            .catch(err => console.error('Failed to copy: ', err));
+    };
     return (
         <div className='detail-page'>
             <div className='description-view'>
                 <img className='bannerImage' src={bannerImage} alt='bannerImage' />
                 <div className='title-with-share'>
                     <div className='title'>{data.courseName}</div>
-                    <img src={copied ? greenTickIcon: shareIcon} alt='shareIcon' onClick={copied ? null : copyToClipboard} />
+                    <img src={copied ? greenTickIcon : shareIcon} alt='shareIcon' onClick={copied ? null : copyToClipboard} />
                 </div>
                 <div className='course-detail'>
                     <div className='course-duration'>
@@ -70,7 +70,10 @@ const DetailPageHeaderCard = ({data}) => {
                     <img src={tickIcon} alt='tickIcon' />
                     <p className="article">{data.resources} downloadalbe resources</p>
                 </div>
-                <button>Enroll Now</button>
+                <button className={(data.seatLeft <= 0) ? 'disableButton' : 'enableButton'} onClick={!data.isEnrolled ? onClick : null} disabled={(data.seatLeft <= 0) ? true : false}>
+                    {data.isEnrolled == true ?
+                        'Enrolled' : 'Enroll Now'}
+                </button>
                 <div className="seat-left-view">
                     <div className="filling-fast">Filling Fast</div>
                     <div className={seatLeftClassName}>Seat left : {data.seatLeft} of {data.totalSeat}</div>

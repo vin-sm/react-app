@@ -18,6 +18,13 @@ const DetailsPage = () => {
         navigate('/');
     };
 
+    const handleEnrolledViewClick = () => {
+        courseData.isEnrolled = true
+        if (courseData.seatLeft > 0) {
+            courseData.seatLeft -= 1;
+        }
+        updateData(courseData);
+    }
     return (
         <div className='main-content'>
             <div className='backToHome'>
@@ -27,7 +34,7 @@ const DetailsPage = () => {
                     <div className='course-detail-title'>Course Details</div>
                 </div>
             </div>
-            <DetailPageHeaderCard data={courseData} />
+            <DetailPageHeaderCard data={courseData} onClick={() => handleEnrolledViewClick} />
             <DetailPageDescriptionCard data={courseData} />
             <div className='assesments-view'>
                 <h3 className='assesments'>Assesments</h3>

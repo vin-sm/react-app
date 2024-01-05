@@ -1,31 +1,33 @@
 /* LeftMenu.css */
 
 .left-menu {
-    width: 60px;
-    background-color: white;
+  width: 60px;
+  background-color: white;
+  height: 100vh;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.left-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-menu ul li {
+  margin-bottom: 10px;
+}
+
+.left-menu ul li img {
+  color: white;
+  width: 150px;
+  height: auto;
+}
+
+@media screen {
+  .left-menu {
+    position: fixed;
     height: 100vh;
-    overflow-y: auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
-  .left-menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .left-menu ul li {
-    margin-bottom: 10px;
-  }
-  
-  .left-menu ul li img {
-    color: white;
-    width: 150px;
-    height: auto;
-  }
-  @media screen {
-    .left-menu {
-      position: sticky;
-      height: 120vh;
-    }
-  }
-  
+}

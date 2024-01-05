@@ -5,21 +5,24 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DetailsPage from './DetailsPage';
 import HomePage from './HomePage';
+import { DataProvider } from './CourseListContext';
 
 const App = () => {
   return (
-    <Router>
-      <div>
-        <NavBar />
-        <div style={{ display: 'flex' }}>
-          <LeftMenu />
-          <Routes>
-            <Route path="/" exact element={<HomePage />}  />
-            <Route path="/details/:id" element={<DetailsPage />} />
-          </Routes>
+    <DataProvider>
+      <Router>
+        <div>
+          <NavBar />
+          <div style={{ display: 'flex' }}>
+            <LeftMenu />
+            <Routes>
+              <Route path="/" exact element={<HomePage />} />
+              <Route path="/details/:id" element={<DetailsPage />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </DataProvider>
   );
 };
 

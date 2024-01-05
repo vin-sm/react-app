@@ -41,12 +41,12 @@
 }
 .progress button {
   width: 100px;
-  height: 24px;
   border: none;
   margin-left: 60px;
   background-color: #86BC24;
   color: white;
   border-radius: 8px;
+  align-items: center;
 }
 .mainDiv {
   height: 4px;

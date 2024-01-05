@@ -2,15 +2,13 @@ import InProgressCard from './InProgressView';
 import './App.css';
 import exploreNowIcon from './images/exploreNowIcon.svg'
 import RecommendedCourseView from './RecommendedCourseView'
-import React, { useState } from 'react';
+import React from 'react';
+import { useData } from './CourseListContext';
 
 const HomePage = () => {
 
-    const [receivedObject, setReceivedObject] = useState([]);
-    const handleObjectFromCourseView = (newData) => {
-        setReceivedObject(prevData => [...prevData, ...newData]);
-        // You can perform any action with the received object here
-    };
+    const { data, updateData } = useData();
+    const enrolledCard = data.filter((card) => card.isEnrolled == true)
 
     return (<div className='main-content'>
         <div className='explore-now'>
@@ -21,9 +19,9 @@ const HomePage = () => {
             </div>
             <div className='explore-image'><img src={exploreNowIcon} alt='exploreNowIcon'></img></div>
         </div>
-        {receivedObject.length > 0 ? (
-            <InProgressCard cards={receivedObject} />) : null}
-        <RecommendedCourseView onObjectPassed={handleObjectFromCourseView} />
+        {enrolledCard.length > 0 ? (
+            <InProgressCard cards={enrolledCard} />) : null}
+        <RecommendedCourseView />
     </div>
     );
 };

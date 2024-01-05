@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/InProgessCard.css';
 import exploreNowIcon from './images/exploreNowIcon.svg';
+import { Link } from 'react-router-dom';
 
 const Card = ({ card }) => {
   return (
@@ -14,7 +15,9 @@ const Card = ({ card }) => {
           <div class="mainDiv" style={{ width: card.totalLessonCount * 10 }}>
             <div class="childDiv" style={{ width: card.completedLessonCount * 10 }}></div>
           </div>
-          <button>Resume</button>
+          <Link to={`/details/${card.id}`} style={{ textDecoration: 'none', color: 'white' }}>
+            <button>Resume</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -33,6 +33,10 @@
     color: #2E3F39;
     padding-top: 12px;
     margin: 0;
+    resize: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .course-update { 
     display: flex;
@@ -101,7 +105,6 @@
     border: none;
     border-radius: 8px;
     height: 30px;
-    width: 60px;
     font-size: 12px;
     font-weight: bold;
     color: white;

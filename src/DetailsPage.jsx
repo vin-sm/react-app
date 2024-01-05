@@ -23,7 +23,7 @@ const DetailsPage = () => {
             <div className='backToHome'>
                 <button onClick={goToHome}>Back to Home</button>
                 <div className='header-title'>
-                    <div className='home-title'>Home {'>'}</div>
+                    <div className='home-title' onClick={goToHome}>Home {'>'}</div>
                     <div className='course-detail-title'>Course Details</div>
                 </div>
             </div>

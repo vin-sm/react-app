@@ -25,6 +25,7 @@
 }
 .home-title {
     color: #86BC24;
+    cursor: pointer;
 }
 .course-detail-title {
     padding-left: 10px;
